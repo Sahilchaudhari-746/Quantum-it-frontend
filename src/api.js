@@ -1,4 +1,4 @@
-const API_BASE = process.env.REACT_APP_API_BASE || 'https://quantum-it-nine.vercel.app/api';
+const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:5000/api';
 
 export async function register(data) {
   const res = await fetch(`${API_BASE}/auth/register`, {
@@ -36,3 +36,4 @@ export function logout() {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
 }
+
